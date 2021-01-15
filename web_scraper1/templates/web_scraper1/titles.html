@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titles</h1>
+    {% if tit%}
+
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Title1</th>
+            <th>Title2</th>
+            <th>Title3</th>
+            <th>Title4</th>
+            <th>Title5</th>
+            <th>Title6</th>
+            <th>Title7</th>
+            <th>Title8</th>
+            <th>Title9</th>
+            <th>Title10</th>
+        </tr>
+        {% for t in tit %}
+         
+         <tr>
+             <td>{{t.tag}}
+             </td>
+             <td>{{t.tag1}}
+            </td>
+            <td>{{t.tag2}}
+            </td>
+            <td>{{t.tag3}}
+            </td>
+            <td>{{t.tag4}}
+            </td>
+            <td>{{t.tag5}}
+            </td>
+            <td>{{t.tag6}}
+            </td>
+            <td>{{t.tag7}}
+            </td>
+            <td>{{t.tag8}}
+            </td>
+            <td>{{t.tag9}}
+            </td>
+            <td>{{t.tag10}}
+            </td>
+         </tr>
+         {% endfor %}
+    </table>
+
+
+    
+    {% else %}
+    <h1>No Titles found</h1>
+    {% endif %}
+</body>
+</html>
