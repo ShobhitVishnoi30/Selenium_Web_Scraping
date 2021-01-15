@@ -34,11 +34,20 @@ def call_data(tag):
     driver =webdriver.Chrome(PATH)
     driver.get("https://medium.com/search?q="+tag) 
     titles=driver.find_elements_by_class_name("graf--title")
-    tag=driver.find_elements_by_class_name("u-clearfix")
-    for t in tag:
-        print(t.text)
+    details=driver.find_elements_by_class_name("graf--trailing")
+    result1=[]
+    for t in details:
+        result1.append(t.text)
+    if(len(result1)<10):
+        length=len(result1)
+        for i in range(length,10):
+            result1.append(0);
+    sa=Tags(id=2,tag="",tag1=result1[0],tag2=result1[1],tag3=result1[2],tag4=result1[3],tag5=result1[4],tag6=result1[5],tag7=result1[6],tag8=result1[7],tag9=result1[8],tag10=result1[9])
+    sa.save()
     result=[]
     for title in titles:
         result.append(title.text)
     return result
+
+
 
