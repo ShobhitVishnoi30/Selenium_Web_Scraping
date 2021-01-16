@@ -22,7 +22,7 @@ def showformdata(request):
             if(len(result1)<10):
                 length=len(result1)
                 for i in range(length,10):
-                    result1.append(0);
+                    result1.append('');
             sa=Tags(id=1,tag=t,tag1=result1[0],tag2=result1[1],tag3=result1[2],tag4=result1[3],tag5=result1[4],tag6=result1[5],tag7=result1[6],tag8=result1[7],tag9=result1[8],tag10=result1[9])
             sa.save()
             ta=Tags.objects.all()
@@ -75,15 +75,15 @@ def call_data(tag):
     if(len(authors)<10):
         length=len(authors)
         for i in range(length,10):
-            authors.append(0)
+            authors.append('')
     if(len(dates)<10):
         length=len(dates)
         for i in range(length,10):
-            dates.append(0)
+            dates.append('')
     if(len(result1)<10):
         length=len(result1)
         for i in range(length,10):
-            result1.append(0);
+            result1.append('');
     sa=Tags(id=4,tag="Description",tag1=result1[0],tag2=result1[1],tag3=result1[2],tag4=result1[3],tag5=result1[4],tag6=result1[5],tag7=result1[6],tag8=result1[7],tag9=result1[8],tag10=result1[9])
     sa.save()
     sa1=Tags(id=2,tag="Authors",tag1=authors[0],tag2=authors[1],tag3=authors[2],tag4=authors[3],tag5=authors[4],tag6=authors[5],tag7=authors[6],tag8=authors[7],tag9=authors[8],tag10=authors[9])
